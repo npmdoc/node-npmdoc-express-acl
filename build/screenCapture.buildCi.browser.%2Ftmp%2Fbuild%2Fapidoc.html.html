@@ -1,0 +1,1359 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a>express-acl (v1.0.1)</a>
+</h1>
+<h4>Access control list manager for Expressjs</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-acl">module express-acl</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-acl.authorize">
+            function <span class="apidocSignatureSpan">express-acl.</span>authorize
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-acl.config">
+            function <span class="apidocSignatureSpan">express-acl.</span>config
+            <span class="apidocSignatureSpan">(config, response)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-acl.</span>helpers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-acl.</span>nacl</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-acl.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-acl.authorize">module express-acl.authorize</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-acl.authorize.authorize">
+            function <span class="apidocSignatureSpan">express-acl.</span>authorize
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-acl.authorize.unless">
+            function <span class="apidocSignatureSpan">express-acl.authorize.</span>unless
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-acl.helpers">module express-acl.helpers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-acl.helpers.getPolicy">
+            function <span class="apidocSignatureSpan">express-acl.helpers.</span>getPolicy
+            <span class="apidocSignatureSpan">(permissions, resource)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-acl.helpers.getRole">
+            function <span class="apidocSignatureSpan">express-acl.helpers.</span>getRole
+            <span class="apidocSignatureSpan">(res, decoded, session)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-acl.helpers.getRules">
+            function <span class="apidocSignatureSpan">express-acl.helpers.</span>getRules
+            <span class="apidocSignatureSpan">(path, encoding, isYaml)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-acl.helpers.resource">
+            function <span class="apidocSignatureSpan">express-acl.helpers.</span>resource
+            <span class="apidocSignatureSpan">(next, url, baseUrl)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-acl.nacl">module express-acl.nacl</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-acl.nacl.authorize">
+            function <span class="apidocSignatureSpan">express-acl.nacl.</span>authorize
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-acl.nacl.config">
+            function <span class="apidocSignatureSpan">express-acl.nacl.</span>config
+            <span class="apidocSignatureSpan">(config, response)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-acl.utils">module express-acl.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-acl.utils.checkProperties">
+            function <span class="apidocSignatureSpan">express-acl.utils.</span>checkProperties
+            <span class="apidocSignatureSpan">(rules)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-acl.utils.deny">
+            function <span class="apidocSignatureSpan">express-acl.utils.</span>deny
+            <span class="apidocSignatureSpan">(res, status, customMessage, response)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-acl.utils.validate">
+            function <span class="apidocSignatureSpan">express-acl.utils.</span>validate
+            <span class="apidocSignatureSpan">(rules)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-acl.utils.whenGlobAndActionAllow">
+            function <span class="apidocSignatureSpan">express-acl.utils.</span>whenGlobAndActionAllow
+            <span class="apidocSignatureSpan">(res, next, method, methods, response)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-acl.utils.whenGlobAndActionDeny">
+            function <span class="apidocSignatureSpan">express-acl.utils.</span>whenGlobAndActionDeny
+            <span class="apidocSignatureSpan">(res, next, method, methods, response)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-acl.utils.whenIsArrayMethod">
+            function <span class="apidocSignatureSpan">express-acl.utils.</span>whenIsArrayMethod
+            <span class="apidocSignatureSpan">(res, next, action, method, methods, response)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-acl.utils.whenResourceAndMethodGlob">
+            function <span class="apidocSignatureSpan">express-acl.utils.</span>whenResourceAndMethodGlob
+            <span class="apidocSignatureSpan">(res, next, action, response)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-acl" id="apidoc.module.express-acl">module express-acl</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-acl.authorize" id="apidoc.element.express-acl.authorize">
+        function <span class="apidocSignatureSpan">express-acl.</span>authorize
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function authorize(req, res, next) {
+  let method = req.method;
+  let resource = helper.resource(next, req.originalUrl, opt.baseUrl);
+<span class="apidocCodeCommentSpan">  /**
+   * if not resource terminate script
+   */
+</span>
+  if (!resource || !_.isString(resource)) {
+    return;
+  }
+
+  /**
+   * [group description]
+   * @type {[type]}
+   */
+
+  let role = helper.getRole(res, req.decoded, req.session);
+
+  if (!_.isString(role) || !role) {
+    return;
+  }
+
+  /**
+   * get resource from the url
+   */
+
+  let groupPermissions = opt.rules.get(role);
+
+  /**
+   * if no groupPermissions
+   */
+
+  if (!groupPermissions || groupPermissions.length === 0) {
+    return utils.deny(
+      res,
+      404,
+      'REQUIRED: Group not found',
+      null
+    );
+  }
+
+  let policy = groupPermissions[0];
+  let currResource = policy.resource;
+  let length = groupPermissions.length;
+  let methods = policy.methods;
+
+  /**
+   * Globs/ resources
+   */
+  if (length === 1 &amp;&amp; currResource === '*') {
+    switch (policy.action) {
+      case 'allow':
+        return utils.whenGlobAndActionAllow(
+          res,
+          next,
+          method,
+          methods,
+          opt.response
+        );
+      default:
+        return utils.whenGlobAndActionDeny(
+          res,
+          next,
+          method,
+          methods,
+          opt.response
+        );
+    }
+  }
+
+  /**
+   * If we have more that one group and we no glob '*'
+   */
+
+  if (length &gt;= 1 &amp;&amp; resource !== '*') {
+
+    /**
+     * [methods Get all the methods defined on the group]
+     * @param {[Object]} [group]
+     * @param {string} [resource]
+     * @type {[Array]}
+     */
+
+    let policy = helper.getPolicy(groupPermissions, resource);
+
+    if (!policy) {
+      return utils.deny(
+        res,
+        404,
+        'REQUIRED: Policy not found'
+      );
+    }
+
+    let methods = policy.methods;
+
+    /**
+     * If the methods are defined with a glob "*"
+     */
+
+    if (methods &amp;&amp; _.isString(methods)) {
+      return utils.whenResourceAndMethodGlob(
+        res,
+        next,
+        policy.action,
+        methods,
+        opt.response
+      );
+    }
+
+    /**
+     * If the methods are defined in an array
+     */
+
+    if (_.isArray(methods)) {
+      return utils.whenIsArrayMethod(
+        res,
+        next,
+        policy.action,
+        method,
+        methods,
+        opt.response
+      );
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-acl.config" id="apidoc.element.express-acl.config">
+        function <span class="apidocSignatureSpan">express-acl.</span>config
+        <span class="apidocSignatureSpan">(config, response)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function config(config, response) {
+  let options = config || {};
+  let yml = options.yml || false;
+  opt.response = response;
+  opt.baseUrl = options.baseUrl;
+
+  if (options.rules) {
+    opt.rules = utils.validate(options.rules);
+    return opt.rules;
+  }
+
+<span class="apidocCodeCommentSpan">  /**
+   * Get the filename
+   */
+</span>
+  let defaultFilename = yml ? 'nacl.yml' : 'nacl.json';
+  let filename = options.filename ? options.filename : defaultFilename;
+
+  /**
+   * Merge filename and path
+   */
+
+  let path = filename &amp;&amp; options.path ?
+    (`${options.path}/${filename}`) : filename;
+
+
+  opt.rules = helper.getRules(path, options.encoding, yml);
+
+  return opt.rules;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// if your backend routes have base url prefix e.g  /api/&lt;resource&gt;,  v1/&lt;resource&gt; ,
+// developer/v1/&lt;resource&gt;
+// specify it in the config property baserUrl {baseurl: 'api'} ,
+// {baseurl: 'v1'}, {baseurl: 'developer/v1'} respectively
+// else you can specify {baseurl: '/'} or ignore it entirely
+
+
+acl.<span class="apidocCodeKeywordSpan">config</span>({
+  baseUrl:'api'
+});
+
+// path specified
+// looks for ac.json in the config folder
+
+acl.config({
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-acl.authorize" id="apidoc.module.express-acl.authorize">module express-acl.authorize</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-acl.authorize.authorize" id="apidoc.element.express-acl.authorize.authorize">
+        function <span class="apidocSignatureSpan">express-acl.</span>authorize
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function authorize(req, res, next) {
+  let method = req.method;
+  let resource = helper.resource(next, req.originalUrl, opt.baseUrl);
+<span class="apidocCodeCommentSpan">  /**
+   * if not resource terminate script
+   */
+</span>
+  if (!resource || !_.isString(resource)) {
+    return;
+  }
+
+  /**
+   * [group description]
+   * @type {[type]}
+   */
+
+  let role = helper.getRole(res, req.decoded, req.session);
+
+  if (!_.isString(role) || !role) {
+    return;
+  }
+
+  /**
+   * get resource from the url
+   */
+
+  let groupPermissions = opt.rules.get(role);
+
+  /**
+   * if no groupPermissions
+   */
+
+  if (!groupPermissions || groupPermissions.length === 0) {
+    return utils.deny(
+      res,
+      404,
+      'REQUIRED: Group not found',
+      null
+    );
+  }
+
+  let policy = groupPermissions[0];
+  let currResource = policy.resource;
+  let length = groupPermissions.length;
+  let methods = policy.methods;
+
+  /**
+   * Globs/ resources
+   */
+  if (length === 1 &amp;&amp; currResource === '*') {
+    switch (policy.action) {
+      case 'allow':
+        return utils.whenGlobAndActionAllow(
+          res,
+          next,
+          method,
+          methods,
+          opt.response
+        );
+      default:
+        return utils.whenGlobAndActionDeny(
+          res,
+          next,
+          method,
+          methods,
+          opt.response
+        );
+    }
+  }
+
+  /**
+   * If we have more that one group and we no glob '*'
+   */
+
+  if (length &gt;= 1 &amp;&amp; resource !== '*') {
+
+    /**
+     * [methods Get all the methods defined on the group]
+     * @param {[Object]} [group]
+     * @param {string} [resource]
+     * @type {[Array]}
+     */
+
+    let policy = helper.getPolicy(groupPermissions, resource);
+
+    if (!policy) {
+      return utils.deny(
+        res,
+        404,
+        'REQUIRED: Policy not found'
+      );
+    }
+
+    let methods = policy.methods;
+
+    /**
+     * If the methods are defined with a glob "*"
+     */
+
+    if (methods &amp;&amp; _.isString(methods)) {
+      return utils.whenResourceAndMethodGlob(
+        res,
+        next,
+        policy.action,
+        methods,
+        opt.response
+      );
+    }
+
+    /**
+     * If the methods are defined in an array
+     */
+
+    if (_.isArray(methods)) {
+      return utils.whenIsArrayMethod(
+        res,
+        next,
+        policy.action,
+        method,
+        methods,
+        opt.response
+      );
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-acl.authorize.unless" id="apidoc.element.express-acl.authorize.unless">
+        function <span class="apidocSignatureSpan">express-acl.authorize.</span>unless
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unless = function (options) {
+  var parent = this;
+
+  var opts = typeof options === 'function' ? {custom: options} : options;
+  opts.useOriginalUrl = (typeof opts.useOriginalUrl === 'undefined') ? true : opts.useOriginalUrl;
+
+  return function (req, res, next) {
+    var url = URL.parse((opts.useOriginalUrl ? req.originalUrl : req.url) || req.url || '', true);
+
+    var skip = false;
+
+    if (opts.custom) {
+      skip = skip || opts.custom(req);
+    }
+
+    var paths = !opts.path || Array.isArray(opts.path) ?
+                opts.path : [opts.path];
+
+    if (paths) {
+      skip = skip || paths.some(function (p) {
+        return isUrlMatch(p, url.pathname) &amp;&amp; isMethodMatch(p.methods, req.method);
+      });
+    }
+
+    var exts = (!opts.ext || Array.isArray(opts.ext)) ?
+               opts.ext : [opts.ext];
+
+    if (exts) {
+      skip = skip || exts.some(function (ext) {
+        return url.pathname.substr(ext.length * -1) === ext;
+      });
+    }
+
+    var methods = (!opts.method || Array.isArray(opts.method)) ?
+                  opts.method : [opts.method];
+
+    if (methods) {
+      skip = skip || !!~methods.indexOf(req.method);
+    }
+
+    if (skip) {
+      return next();
+    }
+
+    parent(req, res, next);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+## unless[type:function, params: function or object]
+By default any route that has no defined policy against it is blocked, this means you cannot access this route untill you specify
+ a policy. This method enables you to exclude unprotected routes. This method uses express-unless package to achive this functionality
+. For more details on its usage follow this link [express-unless](https://github.com/jfromaniello/express-unless/blob/master/README
+.md)
+
+```js
+//assuming we want to hide /auth/google from express acl
+
+app.use(acl.authorize.<span class="apidocCodeKeywordSpan">unless</span>({path:['/auth/google']}));
+
+```
+
+Anytime that this route is visited, unless method will exlude it from being passed though our middleware.
+
+**N/B** You don't have to install `express-unless` it has already been included into the project.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-acl.helpers" id="apidoc.module.express-acl.helpers">module express-acl.helpers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-acl.helpers.getPolicy" id="apidoc.element.express-acl.helpers.getPolicy">
+        function <span class="apidocSignatureSpan">express-acl.helpers.</span>getPolicy
+        <span class="apidocSignatureSpan">(permissions, resource)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPolicy(permissions, resource) {
+  let policy = _.find(permissions, {
+    resource: resource
+  });
+
+  if (policy) {
+    return {
+      methods: policy.methods,
+      action: policy.action
+    };
+  }
+  return policy;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * [methods Get all the methods defined on the group]
+ * @param {[Object]} [group]
+ * @param {string} [resource]
+ * @type {[Array]}
+ */
+
+let policy = helper.<span class="apidocCodeKeywordSpan">getPolicy</span>(groupPermissions, resource);
+
+if (!policy) {
+  return utils.deny(
+    res,
+    404,
+    'REQUIRED: Policy not found'
+  );
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-acl.helpers.getRole" id="apidoc.element.express-acl.helpers.getRole">
+        function <span class="apidocSignatureSpan">express-acl.helpers.</span>getRole
+        <span class="apidocSignatureSpan">(res, decoded, session)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getRole(res, decoded, session) {
+
+<span class="apidocCodeCommentSpan">  /**
+   * if role is attached to the session
+   * Return role
+   */
+</span>
+  if (decoded &amp;&amp; decoded.role) {
+    return decoded.role;
+  }
+
+  /**
+   * if role is attached to the decoded
+   * Return role
+   */
+
+  if (session &amp;&amp; session.role) {
+    return session.role;
+  }
+
+  /**
+   * if role is not attached to the session or decoed object
+   * Return role
+   */
+
+  return utils.deny(res, 404, 'REQUIRED: Role not found');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+/**
+ * [group description]
+ * @type {[type]}
+ */
+
+let role = helper.<span class="apidocCodeKeywordSpan">getRole</span>(res, req.decoded, req.session);
+
+if (!_.isString(role) || !role) {
+  return;
+}
+
+/**
+ * get resource from the url
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-acl.helpers.getRules" id="apidoc.element.express-acl.helpers.getRules">
+        function <span class="apidocSignatureSpan">express-acl.helpers.</span>getRules
+        <span class="apidocSignatureSpan">(path, encoding, isYaml)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getRules(path, encoding, isYaml) {
+  let rules, buffer;
+
+  try {
+    buffer = fs.readFileSync(path, { encoding });
+    rules = (isYaml) ? yaml.safeLoad(buffer) : JSON.parse(buffer);
+  } catch (error) {
+    throw Error(error);
+  }
+
+  return utils.validate(rules);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  * Merge filename and path
+  */
+
+ let path = filename &amp;&amp; options.path ?
+   (`${options.path}/${filename}`) : filename;
+
+
+ opt.rules = helper.<span class="apidocCodeKeywordSpan">getRules</span>(path, options.encoding, yml);
+
+ return opt.rules;
+}
+
+/**
+* [authorize Express middleware]
+* @param  {[type]}   req  [Th request object]
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-acl.helpers.resource" id="apidoc.element.express-acl.helpers.resource">
+        function <span class="apidocSignatureSpan">express-acl.helpers.</span>resource
+        <span class="apidocSignatureSpan">(next, url, baseUrl)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function resource(next, url, baseUrl) {
+  let base = (baseUrl) ? baseUrl.match(/([A-Z])\w+/gi) : '';
+  let lengthOfTheBaseUrl = (base) ? base.length : 0;
+  let arr = url.match(/([A-Z])\w+/gi);
+
+  if (arr) {
+    arr = arr.splice(lengthOfTheBaseUrl);
+    return arr[0];
+  }
+  return next();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param  {[type]}   res  [The response object]
+ * @param  {Function} next [description]
+ * @return {[type]}        [description]
+ */
+
+function authorize(req, res, next) {
+let method = req.method;
+let resource = helper.<span class="apidocCodeKeywordSpan">resource</span>(next, req.originalUrl, opt.baseUrl);
+/**
+ * if not resource terminate script
+ */
+
+if (!resource || !_.isString(resource)) {
+  return;
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-acl.nacl" id="apidoc.module.express-acl.nacl">module express-acl.nacl</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-acl.nacl.authorize" id="apidoc.element.express-acl.nacl.authorize">
+        function <span class="apidocSignatureSpan">express-acl.nacl.</span>authorize
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function authorize(req, res, next) {
+  let method = req.method;
+  let resource = helper.resource(next, req.originalUrl, opt.baseUrl);
+<span class="apidocCodeCommentSpan">  /**
+   * if not resource terminate script
+   */
+</span>
+  if (!resource || !_.isString(resource)) {
+    return;
+  }
+
+  /**
+   * [group description]
+   * @type {[type]}
+   */
+
+  let role = helper.getRole(res, req.decoded, req.session);
+
+  if (!_.isString(role) || !role) {
+    return;
+  }
+
+  /**
+   * get resource from the url
+   */
+
+  let groupPermissions = opt.rules.get(role);
+
+  /**
+   * if no groupPermissions
+   */
+
+  if (!groupPermissions || groupPermissions.length === 0) {
+    return utils.deny(
+      res,
+      404,
+      'REQUIRED: Group not found',
+      null
+    );
+  }
+
+  let policy = groupPermissions[0];
+  let currResource = policy.resource;
+  let length = groupPermissions.length;
+  let methods = policy.methods;
+
+  /**
+   * Globs/ resources
+   */
+  if (length === 1 &amp;&amp; currResource === '*') {
+    switch (policy.action) {
+      case 'allow':
+        return utils.whenGlobAndActionAllow(
+          res,
+          next,
+          method,
+          methods,
+          opt.response
+        );
+      default:
+        return utils.whenGlobAndActionDeny(
+          res,
+          next,
+          method,
+          methods,
+          opt.response
+        );
+    }
+  }
+
+  /**
+   * If we have more that one group and we no glob '*'
+   */
+
+  if (length &gt;= 1 &amp;&amp; resource !== '*') {
+
+    /**
+     * [methods Get all the methods defined on the group]
+     * @param {[Object]} [group]
+     * @param {string} [resource]
+     * @type {[Array]}
+     */
+
+    let policy = helper.getPolicy(groupPermissions, resource);
+
+    if (!policy) {
+      return utils.deny(
+        res,
+        404,
+        'REQUIRED: Policy not found'
+      );
+    }
+
+    let methods = policy.methods;
+
+    /**
+     * If the methods are defined with a glob "*"
+     */
+
+    if (methods &amp;&amp; _.isString(methods)) {
+      return utils.whenResourceAndMethodGlob(
+        res,
+        next,
+        policy.action,
+        methods,
+        opt.response
+      );
+    }
+
+    /**
+     * If the methods are defined in an array
+     */
+
+    if (_.isArray(methods)) {
+      return utils.whenIsArrayMethod(
+        res,
+        next,
+        policy.action,
+        method,
+        methods,
+        opt.response
+      );
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-acl.nacl.config" id="apidoc.element.express-acl.nacl.config">
+        function <span class="apidocSignatureSpan">express-acl.nacl.</span>config
+        <span class="apidocSignatureSpan">(config, response)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function config(config, response) {
+  let options = config || {};
+  let yml = options.yml || false;
+  opt.response = response;
+  opt.baseUrl = options.baseUrl;
+
+  if (options.rules) {
+    opt.rules = utils.validate(options.rules);
+    return opt.rules;
+  }
+
+<span class="apidocCodeCommentSpan">  /**
+   * Get the filename
+   */
+</span>
+  let defaultFilename = yml ? 'nacl.yml' : 'nacl.json';
+  let filename = options.filename ? options.filename : defaultFilename;
+
+  /**
+   * Merge filename and path
+   */
+
+  let path = filename &amp;&amp; options.path ?
+    (`${options.path}/${filename}`) : filename;
+
+
+  opt.rules = helper.getRules(path, options.encoding, yml);
+
+  return opt.rules;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// if your backend routes have base url prefix e.g  /api/&lt;resource&gt;,  v1/&lt;resource&gt; ,
+// developer/v1/&lt;resource&gt;
+// specify it in the config property baserUrl {baseurl: 'api'} ,
+// {baseurl: 'v1'}, {baseurl: 'developer/v1'} respectively
+// else you can specify {baseurl: '/'} or ignore it entirely
+
+
+acl.<span class="apidocCodeKeywordSpan">config</span>({
+  baseUrl:'api'
+});
+
+// path specified
+// looks for ac.json in the config folder
+
+acl.config({
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-acl.utils" id="apidoc.module.express-acl.utils">module express-acl.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-acl.utils.checkProperties" id="apidoc.element.express-acl.utils.checkProperties">
+        function <span class="apidocSignatureSpan">express-acl.utils.</span>checkProperties
+        <span class="apidocSignatureSpan">(rules)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function checkProperties(rules) {
+  let rulesMap = new Map();
+
+  for (let rule of rules) {
+    assert.equal(typeof rule.group, 'string');
+    assertIsGlobOrArray(rule.permissions, 'Permissions');
+
+    for (let policy of rule.permissions) {
+      assert(typeof policy.resource, 'string');
+      assertIsGlobOrArray(policy.methods, 'Methods');
+
+      if (policy.action !== 'allow' &amp;&amp; policy.action !== 'deny') {
+        throw new Error('TypeError: action should be either "deny" or "allow"');
+      }
+    }
+
+    rulesMap.set(rule.group, rule.permissions);
+
+  }
+
+  return rulesMap;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-acl.utils.deny" id="apidoc.element.express-acl.utils.deny">
+        function <span class="apidocSignatureSpan">express-acl.utils.</span>deny
+        <span class="apidocSignatureSpan">(res, status, customMessage, response)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deny(res, status, customMessage, response) {
+  let message = customMessage ? customMessage : 'Unauthorized access';
+
+  if (response &amp;&amp; typeof response === 'object') {
+    return res.status(status)
+      .send(response);
+  }
+
+  return res.status(status)
+    .send({
+      status: 'Access denied',
+      success: false,
+      message: message
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ }
+
+ /**
+  * if role is not attached to the session or decoed object
+  * Return role
+  */
+
+ return utils.<span class="apidocCodeKeywordSpan">deny</span>(res, 404, 'REQUIRED: Role not found');
+}
+
+
+/**
+* [resource finds the resource based of the baseurl specified]
+* @param  {Function} next    [Express next function]
+* @param  {[String}  url     [Request url]
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-acl.utils.validate" id="apidoc.element.express-acl.utils.validate">
+        function <span class="apidocSignatureSpan">express-acl.utils.</span>validate
+        <span class="apidocSignatureSpan">(rules)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validate(rules) {
+
+  if (!_.isArray(rules)) {
+    throw new Error('TypeError: Expected Array but got ' + typeof rules);
+  }
+
+  if (rules.length === 0) {
+    return '\u001b[33mPolicy not set, All traffic will be denied\u001b[39m';
+  }
+
+  return checkProperties(rules);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ try {
+   buffer = fs.readFileSync(path, { encoding });
+   rules = (isYaml) ? yaml.safeLoad(buffer) : JSON.parse(buffer);
+ } catch (error) {
+   throw Error(error);
+ }
+
+ return utils.<span class="apidocCodeKeywordSpan">validate</span>(rules);
+}
+
+
+/**
+* [Gets the methods from the selected group]
+* @param  {[Object]} group
+* @param  {[String]} resource
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-acl.utils.whenGlobAndActionAllow" id="apidoc.element.express-acl.utils.whenGlobAndActionAllow">
+        function <span class="apidocSignatureSpan">express-acl.utils.</span>whenGlobAndActionAllow
+        <span class="apidocSignatureSpan">(res, next, method, methods, response)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function whenGlobAndActionAllow(res, next, method, methods, response) {
+  if (_.isString(methods)) {
+    return next();
+  }
+
+<span class="apidocCodeCommentSpan">  /**
+   * [if Its an array of  methods]
+   * 1. check if the method is defined
+   * 2. If defined Allow traffic else deny access
+   */
+</span>
+  if (_.isArray(methods)) {
+    let index = methods.indexOf(method);
+
+    switch (index) {
+      case -1:
+        return deny(res, 403, null, response);
+      default:
+        return next();
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+ * Globs/ resources
+ */
+if (length === 1 &amp;&amp; currResource === '*') {
+  switch (policy.action) {
+    case 'allow':
+      return utils.<span class="apidocCodeKeywordSpan">whenGlobAndActionAllow</span>(
+        res,
+        next,
+        method,
+        methods,
+        opt.response
+      );
+    default:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-acl.utils.whenGlobAndActionDeny" id="apidoc.element.express-acl.utils.whenGlobAndActionDeny">
+        function <span class="apidocSignatureSpan">express-acl.utils.</span>whenGlobAndActionDeny
+        <span class="apidocSignatureSpan">(res, next, method, methods, response)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function whenGlobAndActionDeny(res, next, method, methods, response) {
+  if (_.isString(methods)) {
+    return deny(res, 403, null, response);
+  }
+
+  if (_.isArray(methods)) {
+    let index = methods.indexOf(method);
+    switch (index) {
+      case -1:
+        return next();
+      default:
+        return deny(res, 403, null, response);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      res,
+      next,
+      method,
+      methods,
+      opt.response
+    );
+  default:
+    return utils.<span class="apidocCodeKeywordSpan">whenGlobAndActionDeny</span>(
+      res,
+      next,
+      method,
+      methods,
+      opt.response
+    );
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-acl.utils.whenIsArrayMethod" id="apidoc.element.express-acl.utils.whenIsArrayMethod">
+        function <span class="apidocSignatureSpan">express-acl.utils.</span>whenIsArrayMethod
+        <span class="apidocSignatureSpan">(res, next, action, method, methods, response)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function whenIsArrayMethod(res, next, action, method, methods, response) {
+  let boolean = _.includes(methods, method);
+  switch (boolean) {
+    case true:
+      switch (action) {
+        case 'allow':
+          return next();
+        default:
+          return deny(res, 403, null, response);
+      }
+<span class="apidocCodeCommentSpan">      /* istanbul ignore next */
+</span>      break;
+    case false:
+      switch (action) {
+        case 'allow':
+          return deny(res, 403, null, response);
+        default:
+          return next();
+      }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+/**
+ * If the methods are defined in an array
+ */
+
+if (_.isArray(methods)) {
+  return utils.<span class="apidocCodeKeywordSpan">whenIsArrayMethod</span>(
+    res,
+    next,
+    policy.action,
+    method,
+    methods,
+    opt.response
+  );
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-acl.utils.whenResourceAndMethodGlob" id="apidoc.element.express-acl.utils.whenResourceAndMethodGlob">
+        function <span class="apidocSignatureSpan">express-acl.utils.</span>whenResourceAndMethodGlob
+        <span class="apidocSignatureSpan">(res, next, action, response)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function whenResourceAndMethodGlob(res, next, action, response) {
+  switch (action) {
+    case 'deny':
+      return deny(res, 403, null, response);
+    default:
+      return next();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+let methods = policy.methods;
+
+/**
+ * If the methods are defined with a glob "*"
+ */
+
+if (methods &amp;&amp; _.isString(methods)) {
+  return utils.<span class="apidocCodeKeywordSpan">whenResourceAndMethodGlob</span>(
+    res,
+    next,
+    policy.action,
+    methods,
+    opt.response
+  );
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
